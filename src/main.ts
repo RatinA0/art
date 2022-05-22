@@ -1,17 +1,22 @@
-import Vue from 'vue'
-import VueCompositionAPI, { createApp, h } from '@vue/composition-api'
-import { createPinia, PiniaVuePlugin } from 'pinia'
+import Vue from "vue";
+import VueCompositionAPI, { createApp, h } from "@vue/composition-api";
+import { createPinia, PiniaVuePlugin } from "pinia";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
 
-Vue.use(VueCompositionAPI)
+import vuetify from "@/plugins/vuetify";
+import Vuetify from "vuetify/lib";
+
+Vue.use(VueCompositionAPI);
 
 const app = createApp({
   router,
+  vuetify,
   pinia: createPinia(),
-  render: () => h(App)
-})
-app.use(PiniaVuePlugin)
+  render: () => h(App),
+});
 
-app.mount('#app')
+app.use(PiniaVuePlugin);
+
+app.mount("#app");
