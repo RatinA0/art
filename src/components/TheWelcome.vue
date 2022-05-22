@@ -1,33 +1,18 @@
-<script setup lang="ts">
-import WelcomeItem from "./WelcomeItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
-</script>
-
 <template>
   <div>
-    <v-btn
-      color="primary"
-      outlined
-      @click="$vuetify.theme.dark = !$vuetify.theme.dark"
-    >
-      <v-icon small> mdi-refresh </v-icon>
-      test
-    </v-btn>
+    <DarkModeSwitch></DarkModeSwitch>
 
     <v-btn color="secondary">test</v-btn>
+
     <v-btn color="info">test</v-btn>
+
     <v-btn color="success">test</v-btn>
+
     <v-btn color="warning">test</v-btn>
+
     <v-btn color="error">test</v-btn>
 
     <WelcomeItem>
-      <template #icon>
-        <DocumentationIcon />
-      </template>
       <template #heading>Documentation</template>
 
       Vue’s
@@ -36,33 +21,6 @@ import SupportIcon from "./icons/IconSupport.vue";
     </WelcomeItem>
 
     <WelcomeItem>
-      <template #icon>
-        <ToolingIcon />
-      </template>
-      <template #heading>Tooling</template>
-
-      This project is served and bundled with
-      <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite</a>.
-      The recommended IDE setup is
-      <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> +
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a
-      >. If you need to test your components and web pages, check out
-      <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-      <a
-        href="https://docs.cypress.io/guides/component-testing/introduction"
-        target="_blank"
-        >Cypress Component Testing</a
-      >.
-
-      <br />
-
-      More instructions are available in <code>README.md</code>.
-    </WelcomeItem>
-
-    <WelcomeItem>
-      <template #icon>
-        <EcosystemIcon />
-      </template>
       <template #heading>Ecosystem</template>
 
       Get official tools and libraries for your project:
@@ -81,9 +39,6 @@ import SupportIcon from "./icons/IconSupport.vue";
     </WelcomeItem>
 
     <WelcomeItem>
-      <template #icon>
-        <CommunityIcon />
-      </template>
       <template #heading>Community</template>
 
       Got stuck? Ask your question on
@@ -101,9 +56,6 @@ import SupportIcon from "./icons/IconSupport.vue";
     </WelcomeItem>
 
     <WelcomeItem>
-      <template #icon>
-        <SupportIcon />
-      </template>
       <template #heading>Support Vue</template>
 
       As an independent project, Vue relies on community backing for its
@@ -113,3 +65,8 @@ import SupportIcon from "./icons/IconSupport.vue";
     </WelcomeItem>
   </div>
 </template>
+
+<script setup lang="ts">
+import WelcomeItem from "./WelcomeItem.vue";
+import DarkModeSwitch from "./DarkModeSwitch.vue";
+</script>

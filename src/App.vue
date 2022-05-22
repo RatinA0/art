@@ -50,7 +50,7 @@ header {
 }
 
 a,
-.green {
+.nav-title {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.2s;
