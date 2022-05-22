@@ -1,13 +1,17 @@
 import Vue from "vue";
-import Vuetify, { UserVuetifyPreset } from "vuetify";
+import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 
 import colors from "vuetify/lib/util/colors";
+
+import { mq } from "@/utils/darkMode";
 
 Vue.use(Vuetify);
 
 const vuetify = new Vuetify({
   theme: {
+    // Set default dark mode based on system preferences
+    dark: mq.matches,
     themes: {
       light: {
         accent: colors.shades.black,
