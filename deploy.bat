@@ -7,6 +7,6 @@ cd dist
 git init
 git add -A
 git commit -m 'Deploy'
-git push -f git@github.com:ratina0/art.git master:gh-pages
+git push -f git@github.com:ratina0/art.git gh-pages
 
 cd -
