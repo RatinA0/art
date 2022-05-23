@@ -5,22 +5,12 @@ import HelloWorld from "@/components/HelloWorld.vue";
 <template>
   <v-app>
     <header>
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="@/assets/logo.svg"
-        width="125"
-        height="125"
-      />
+      <label class="logo-label"> ART </label>
 
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-
-        <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </nav>
-      </div>
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+      </nav>
     </header>
 
     <router-view />
@@ -34,7 +24,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
   justify-content: center;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 
   font-weight: normal;
 }
@@ -42,6 +32,13 @@ import HelloWorld from "@/components/HelloWorld.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
+}
+
+.logo-label {
+  display: block;
+  font-size: 100px;
+  font-weight: 200;
+  margin-right: 2rem;
 }
 
 .logo {
@@ -66,7 +63,6 @@ nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -93,11 +89,6 @@ nav a:first-of-type {
     place-items: center;
   }
 
-  #app {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
   header {
     display: flex;
     place-items: center;
@@ -116,11 +107,7 @@ nav a:first-of-type {
 
   nav {
     text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    font-size: 1.5rem;
   }
 }
 </style>
